@@ -38,6 +38,10 @@ class ActionButton: UIButton {
         button.backgroundColor = btnBG
         button.tintColor = iconColor
         button.layer.cornerRadius = 14
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 4)
+        button.layer.shadowOpacity = 0.1
+        button.layer.shadowRadius = 4
         button.addTarget(self, action: #selector(actionBtnTapped), for: .touchUpInside)
         return button
     }()

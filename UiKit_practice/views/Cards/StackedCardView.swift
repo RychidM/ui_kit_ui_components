@@ -46,7 +46,7 @@ class StackedCardView: UIView {
        let label = UILabel()
         label.text = "Mike Wozowlsky"
         label.font = UIFont(name: "Poppins-SemiBold", size: 15)
-        label.textColor = .black
+        label.textColor = .appPrimary
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -55,7 +55,7 @@ class StackedCardView: UIView {
        let label = UILabel()
         label.text = "Friend Request"
         label.font = UIFont(name: "Poppins-Regular", size: 12)
-        label.textColor = .black.withAlphaComponent(0.6)
+        label.textColor = .appPrimary.withAlphaComponent(0.6)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -125,6 +125,7 @@ class StackedCardView: UIView {
         actionStack.addArrangedSubview(acceptBtn)
         actionStack.rightAnchor.constraint(equalTo: container.rightAnchor, constant: -40).isActive = true
         actionStack.centerYAnchor.constraint(equalTo: container.centerYAnchor).isActive = true
+        
     }
     
     required init?(coder: NSCoder) {
