@@ -9,7 +9,6 @@ import UIKit
 
 class ProductCard: UIView {
 
-    
     init() {
         super.init(frame: .zero)
         setupView()
@@ -24,9 +23,6 @@ class ProductCard: UIView {
         backgroundColor = .BG
         addSubview(container)
         container.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
-        container.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        container.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        container.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         container.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     
