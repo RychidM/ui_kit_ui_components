@@ -22,7 +22,7 @@ class GradientButton: UIButton {
     private var label: String?
     private var bgColr: UIColor?
 
-    init(label: String? = nil, icon: UIImage? = UIImage(systemName: "play.fill"), btnHeight: CGFloat? = 56, btnCornerRadius: CGFloat? = 32, btnWidth: CGFloat? = 56, bgColor: UIColor? = nil) {
+    init(label: String? = nil, icon: UIImage? = UIImage(systemName: "play.fill"), btnHeight: CGFloat? = 56, btnCornerRadius: CGFloat? = 56/2, btnWidth: CGFloat? = 56, bgColor: UIColor? = nil) {
         self.icon = icon
         self.btnHeight = btnHeight
         self.btnCornerRadius = btnCornerRadius
@@ -31,6 +31,7 @@ class GradientButton: UIButton {
         self.bgColr = bgColor
         super.init(frame: .zero)
         setupButton()
+        setupBtnView()
     }
 
     required init?(coder: NSCoder) {
@@ -48,7 +49,7 @@ class GradientButton: UIButton {
             tintColor = .white
             bringSubviewToFront(imageView!)
         }
-        frame = CGRect(x: 0, y: 0, width: btnWidth ?? UIScreen.main.bounds.width, height: btnHeight ?? 50)
+//        frame = CGRect(x: 0, y: 0, width: btnWidth ?? UIScreen.main.bounds.width, height: btnHeight ?? 56)
         layer.cornerRadius = btnCornerRadius ?? 16
         translatesAutoresizingMaskIntoConstraints = false
         addTarget(self, action: #selector(onButtonTapped), for: .touchUpInside)
@@ -57,6 +58,7 @@ class GradientButton: UIButton {
         } else {
             setupGradient()
         }
+        translatesAutoresizingMaskIntoConstraints = false
     }
 
     private func setupGradient() {
@@ -77,6 +79,13 @@ class GradientButton: UIButton {
     
     @objc private func onButtonTapped() {
         delegate?.onButtonTapped()
+    }
+    
+    private func setupBtnView () {
+        widthAnchor.constraint(equalToConstant: btnWidth ?? 56).isActive = true
+        heightAnchor.constraint(equalToConstant: btnHeight ?? 56).isActive = true
+        centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
 }
 
