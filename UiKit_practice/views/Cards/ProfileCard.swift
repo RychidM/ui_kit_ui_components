@@ -39,7 +39,6 @@ class ProfileCard: UIView {
         label.font = UIFont(name: "Poppins-SemiBold", size: 18)
         label.textColor = .appPrimary
         label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
        
@@ -49,7 +48,6 @@ class ProfileCard: UIView {
         label.font = UIFont(name: "Poppins-Regular", size: 12)
         label.textColor = .appPrimary.withAlphaComponent(0.6)
         label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -185,7 +183,6 @@ class ProfileCard: UIView {
         super.init(coder: coder)
     }
     
-
 }
 
 #Preview {
