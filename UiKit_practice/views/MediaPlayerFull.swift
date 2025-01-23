@@ -199,7 +199,7 @@ class MediaPlayerFull: UIView {
         durationStack.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.width - 40)).isActive = true
    
         addSubview(trackControl)
-        trackControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -90).isActive = true        
+        trackControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -90).isActive = true
         trackControl.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
         trackControl.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
         trackControl.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
