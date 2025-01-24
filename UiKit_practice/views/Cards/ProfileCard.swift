@@ -74,7 +74,7 @@ class ProfileCard: UIView {
            let label = UILabel()
             label.text = "123"
             label.font = UIFont(name: "Poppins-SemiBold", size: 26)
-            label.textColor = .black
+            label.textColor = .appPrimary
             return label
         }()
         
@@ -100,7 +100,7 @@ class ProfileCard: UIView {
            let label = UILabel()
             label.text = "323"
             label.font = UIFont(name: "Poppins-SemiBold", size: 26)
-            label.textColor = .black
+            label.textColor = .appPrimary
             return label
         }()
         
